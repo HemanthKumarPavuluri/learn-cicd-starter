@@ -3,7 +3,7 @@
 
 # learn-cicd-starter (Notely)
 
-![coverage badge](https://github.com/HemanthKumarPavuluri/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
+![coverage badge](https://github.com/HemanthKumarPavuluri/learn-cicd-starter/actions/workflows/ci.yml/badge.svg?branch=main)
 # learn-cicd-starter (Notely)
 
 
