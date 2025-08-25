@@ -30,17 +30,17 @@ func TestGetAPIKey(t *testing.T) {
 			args: args{
 				headers: http.Header{},
 			},
-			want: "",
+			want:    "",
 			wantErr: true,
 		},
 		{
 			name: "malformed authorization header",
 			args: args{
 				headers: http.Header{
-					"Authorization":[]string{"Bearer token"},
+					"Authorization": []string{"Bearer token"},
 				},
 			},
-			want: "",
+			want:    "",
 			wantErr: true,
 		},
 	}
