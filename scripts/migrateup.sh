@@ -4,5 +4,10 @@ if [ -f .env ]; then
     source .env
 fi
 
-cd sql/schema
-goose turso $DATABASE_URL up
+# Extract DB name from DATABASE_URL
+DB_NAME=notely-db
+
+# Apply migrations using Turso CLI
+for file in sql/schema/*.sql; do
+  turso db shell "$DB_NAME" < "$file"
+done
