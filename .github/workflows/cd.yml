@@ -50,6 +50,11 @@ jobs:
                 gcloud builds submit \
                   --tag us-central1-docker.pkg.dev/notely-470415/notely-ar-repo/notely:latest \
                   .
+          - name: Install Turso CLI
+            run: curl -sSf https://get.turso.tech/install.sh | bash
+
+          - name: Add Turso CLI to PATH
+            run: echo "${HOME}/.turso/bin" >> $GITHUB_PATH
           - name: database migration
             run: bash scripts/migrateup.sh
           - name: Deploy to Cloud Run
